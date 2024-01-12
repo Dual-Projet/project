@@ -1,0 +1,244 @@
+:root {
+  --ff-primary: "Poppins", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-primary);
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  /* for demo purposes only */
+  /*padding: 2rem 0;*/
+}
+
+nav {
+  height: 1rem;
+  width: auto;
+  background-color: #292929;
+  padding: none;
+}
+
+.primary-header {
+  margin-top: 4rem;
+  max-width: 45.6rem;
+}
+
+.primary-header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #292929;
+}
+
+.primary-header a {
+  color: #292929;
+  text-decoration: none;
+  padding-right: 0.25rem;
+}
+
+.wrapper {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.main-content-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+}
+
+/*width is 1.25 and height ratio is 1 */
+.card {
+  position: relative;
+  /*border: 3px solid pink;*/
+  aspect-ratio: 1.25/ 1;
+}
+
+.card-content {
+  position: absolute;
+  background: white;
+  align-self: self-end;
+  padding: 2rem;
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.2);
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #f89344;
+  font-weight: 600;
+}
+
+.card-description {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-img {
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  width: 100%;
+  object-fit: contain;
+  object-position: top;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: column; /*aligns picture above text vertically*/
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #292929;
+}
+
+.profile-img {
+  position: relative;
+  max-height: 180px;
+  max-width: 180px;
+  border-radius: 50%;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.profile p {
+  text-align: center;
+  max-width: 44.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-profile {
+  color: #fb9e31;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  column-gap: 1em;
+  width: 100%;
+  height: 6.25rem;
+  background-color: #121212;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.footer-links > *:last-child {
+  padding-right: 3rem;
+}
+
+:root {
+  --ff-primary: "Poppins", sans-serif;
+}
+
+@media (max-width: 40em) {
+  /* Styles for screens up to 40em (640px) width - mobile */
+
+  .primary-header h1 {
+    font-size: 3rem;
+  }
+
+  .wrapper {
+    padding-inline: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .main-content-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100%, 1fr)
+    ); /* Full-width columns */
+    gap: 1rem; /* Reduce gap between items */
+  }
+
+  .profile p {
+    width: 90%;
+    max-width: none; /* Remove max-width constraint */
+    line-height: 1.8;
+  }
+}
