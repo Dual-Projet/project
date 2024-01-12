@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#register-link").click(function () {
-    window.location.href = "./signin.html";
+    window.location.href = "./signin/signin.html";
   });
 });
 
