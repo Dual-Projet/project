@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="login.css" />
-    <script src="login.js"></script>
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -14,25 +14,33 @@
   </head>
   <body>
     <div class="wrapper">
-      <form action="">
+      <form class="sign-in">
         <h1 id="login">Login</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" required />
+        <div class="input-box username-wrapper">
+          <input type="text" placeholder="Username" required class="username" />
           <i class="bx bxs-user"></i>
+          <span class="error username-error"></span>
         </div>
-        <div class="input-box">
-          <input type="password" placeholder="password" required />
+        <div class="input-box password-wrapper">
+          <input
+            type="password"
+            placeholder="password"
+            class="password"
+            required
+          />
           <i class="bx bxs-lock-alt"></i>
+          <span class="password-error"></span>
         </div>
         <div class="remember-forgot">
           <label><input type="checkbox" />Remember me </label>
           <a href="#">Forgot password?</a>
         </div>
-        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn sign-in-btn">Login</button>
         <div id="register-link" class="register-link">
           <p>Dont't have an account? <a href="#"> Register </a></p>
         </div>
       </form>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>

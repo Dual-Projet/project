@@ -1,33 +1,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>wisecool services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="service.css">
- 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-2sIwdZu2Tlj3uQ8RE3tvWL/Lea/RL7xPdLBeNRHDXEt+vswAFKmpu93qgSKZMWekddgV2FB08gHxFiB1HJp5w==" crossorigin="anonymous" />
+
 </head>
 <body>
-  <nav>
+    <nav>
+        <div class="search-container">
+          <input type="search" class="search-input" placeholder="Search...">
+          <i class="fas fa-search"></i>
+        </div>
+      </nav>
       
-  </nav>
 
   <div class="wrapper">
       <header class="primary-header">
           <h1>Best courses with wisecool,</h1>
           <div>
-              <a href="yassine: yassinesalem54@yourmail.com">mail@yourmail.com</a>&nbsp;&nbsp;
-              <a href="tel:+12345678910">+12345678910</a>
+              <a href="#" class="email-profile"></a>&nbsp;&nbsp;
+              <a href="#" class="tel-profile" ></a>
           </div>
       </header>
 
       <main>
           <div class="main-content-grid">
               <!--Project 1-->
-              <div class="card stacked">
-                  <img class="card-img" src="img/img1.png" alt="project image of house website landing page">
+              <div class="card stacked" data-search="html" >
+                  <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="project image of house website landing page">
                   <div class="card-content">
                       <h2 class="card-title"> UI DESIGN
                       </h2>
@@ -37,8 +42,8 @@
               </div>
 
               <!--Project 2-->
-              <div class="card stacked">
-                  <img class="card-img" src="img/img2.png" alt="project image of geometric shape">
+              <div class="card stacked"  data-search="css">
+                  <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="project image of geometric shape">
                   <div class="card-content">
                     <h2 class="card-title"> UI DESIGN
                     </h2>
@@ -48,8 +53,8 @@
               </div>
 
               <!--Project 3-->
-              <div class="card stacked">
-                  <img class="card-img" src="img/img3.png" alt="illustration image of website page moved to another page">
+              <div class="card stacked"  data-search="js">
+                  <img class="card-img" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="illustration image of website page moved to another page">
                   <div class="card-content">
                     <h2 class="card-title"> UI DESIGN
                     </h2>
@@ -59,8 +64,8 @@
               </div>
 
               <!--Project 4-->
-              <div class="card stacked">
-                  <img class="card-img" src="img/img4.png" alt="sketch image of phones">
+              <div class="card stacked"   data-search="jquery">
+                  <img class="card-img" src="https://cdn.iconscout.com/icon/free/png-256/free-jquery-10-1175155.png" alt="sketch image of phones">
                   <div class="card-content">
                       <h2 class="card-title"> UI DESIGN
                       </h2>
@@ -75,7 +80,7 @@
 
   <footer>
      <div class="profile">
-      <img class="profile-img" src="img/guy-profile.png" alt="profile image of creator">
+      <img class="profile-img" src="wisecool-logo-with-text.svg" alt="profile image of creator">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
       <br>
       <br>
@@ -87,5 +92,6 @@
      
      
   </footer>
+  <script src="service.js"></script>
 </body>
 </html>

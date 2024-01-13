@@ -2,14 +2,7 @@
   --ff-primary: "Poppins", sans-serif;
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -28,31 +21,22 @@ h2 {
   font-family: var(--ff-primary);
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -71,8 +55,7 @@ picture {
 body {
   font-family: var(--ff-primary);
   font-size: 1rem;
-  /* for demo purposes only */
-  /*padding: 2rem 0;*/
+  
 }
 
 nav {
@@ -122,10 +105,9 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
 }
 
-/*width is 1.25 and height ratio is 1 */
+
 .card {
   position: relative;
-  /*border: 3px solid pink;*/
   aspect-ratio: 1.25/ 1;
 }
 
@@ -154,12 +136,16 @@ nav {
   width: 100%;
   object-fit: contain;
   object-position: top;
+  max-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile {
   position: relative;
   display: flex;
-  flex-direction: column; /*aligns picture above text vertically*/
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -170,7 +156,7 @@ nav {
   position: relative;
   max-height: 180px;
   max-width: 180px;
-  border-radius: 50%;
+ 
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
@@ -218,27 +204,89 @@ nav {
 }
 
 @media (max-width: 40em) {
-  /* Styles for screens up to 40em (640px) width - mobile */
-
+  
   .primary-header h1 {
     font-size: 3rem;
   }
 
   .wrapper {
-    padding-inline: 1rem; /* Adjust padding for smaller screens */
+    padding-inline: 1rem; 
   }
 
   .main-content-grid {
     grid-template-columns: repeat(
       auto-fit,
       minmax(100%, 1fr)
-    ); /* Full-width columns */
-    gap: 1rem; /* Reduce gap between items */
+    ); 
+    gap: 1rem; 
   }
 
   .profile p {
     width: 90%;
-    max-width: none; /* Remove max-width constraint */
+    max-width: none; 
     line-height: 1.8;
   }
+}
+
+nav {
+  background-color: #3498db;
+  padding: 10px;
+  text-align: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input {
+  transition: width 0.3s ease-in-out;
+  background: #2196F3;
+}
+
+.search-input::placeholder {
+  color: #fff;
+}
+
+.search-input:hover {
+  background-color: #2980b9;
+}
+nav {
+  background-color: #3498db;
+  padding: 10px;
+  text-align: center;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 250px; 
+  padding: 8px 30px 8px 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.fa-search {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
 }
